@@ -104,6 +104,7 @@ func main() {
 
 	select {
 	case <-quiz_done:
+		timer.Stop()
 		wrapUp(cookies, false)
 	case <-timer.C:
 		wrapUp(cookies, true)
